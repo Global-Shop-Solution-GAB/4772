@@ -1,0 +1,1754 @@
+Program.Sub.ScreenSU.Start
+Gui.frmTask..Create
+Gui.frmTask..Caption("Add/Edit Task")
+Gui.frmTask..Size(7110,3930)
+Gui.frmTask..MinX(0)
+Gui.frmTask..MinY(0)
+Gui.frmTask..Position(0,0)
+Gui.frmTask..BackColor(-2147483633)
+Gui.frmTask..MousePointer(0)
+Gui.frmTask..Event(UnLoad,frmTask_UnLoad)
+Gui.frmTask.GsGCTask.Create(GsGridControl)
+Gui.frmTask.GsGCTask.Size(6915,2940)
+Gui.frmTask.GsGCTask.Position(30,675)
+Gui.frmTask.GsGCTask.Event(RowCellClick,GsGCTask_RowCellClick)
+Gui.frmTask.ddlTask.Create(DropDownList)
+Gui.frmTask.ddlTask.Size(1440,330)
+Gui.frmTask.ddlTask.Position(30,300)
+Gui.frmTask.lblTask.Create(Label,"Task",True,1455,255,0,30,90,True,0,"Arial",8,-2147483633,0)
+Gui.frmTask.lblPrev.Create(Label,"Prev Seq",True,780,255,0,1575,90,True,0,"Arial",8,-2147483633,0)
+Gui.frmTask.ddlPrev.Create(DropDownList)
+Gui.frmTask.ddlPrev.Size(2115,330)
+Gui.frmTask.ddlPrev.Position(1575,300)
+Gui.frmTask.lblNext.Create(Label,"Next Seq",True,780,255,0,3795,90,True,0,"Arial",8,-2147483633,0)
+Gui.frmTask.ddlNext.Create(DropDownList)
+Gui.frmTask.ddlNext.Size(2115,330)
+Gui.frmTask.ddlNext.Position(3795,300)
+Gui.frmTask.cmdAdd.Create(Button)
+Gui.frmTask.cmdAdd.Size(540,375)
+Gui.frmTask.cmdAdd.Position(6390,270)
+Gui.frmTask.cmdAdd.Caption("Add")
+Gui.frmTask.cmdAdd.Event(Click,cmdAdd_Click)
+Gui.frmTask.chkSignoff.Create(CheckBox)
+Gui.frmTask.chkSignoff.Size(300,360)
+Gui.frmTask.chkSignoff.Position(6015,315)
+Gui.frmTask.chkSignoff.Alignment(2)
+Gui.frmTask.lblSignoff.Create(Label,"Signoff",True,660,255,0,5835,90,True,0,"Arial",8,-2147483633,0)
+Gui.frmSignoff..Create
+Gui.frmSignoff..Caption("Task Signoff")
+Gui.frmSignoff..Size(13230,7605)
+Gui.frmSignoff..MinX(12180)
+Gui.frmSignoff..MinY(7920)
+Gui.frmSignoff..Position(0,0)
+Gui.frmSignoff..BackColor(-2147483633)
+Gui.frmSignoff..MousePointer(0)
+Gui.frmSignoff..Event(UnLoad,frmTask_UnLoad)
+Gui.frmSignoff.tabSignoff.Create(Tab)
+Gui.frmSignoff.tabSignoff.Size(13155,7245)
+Gui.frmSignoff.tabSignoff.Position(0,0)
+Gui.frmSignoff.tabSignoff.Tabs(2)
+Gui.frmSignoff.tabSignoff.SetTab(0)
+Gui.frmSignoff.tabSignoff.Caption("Open")
+Gui.frmSignoff.tabSignoff.SetTab(1)
+Gui.frmSignoff.tabSignoff.Caption("Closed")
+Gui.frmSignoff.GsGCOpen.Create(GsGridControl)
+Gui.frmSignoff.GsGCOpen.Size(13005,7245)
+Gui.frmSignoff.GsGCOpen.Position(0,0)
+Gui.frmSignoff.GsGCOpen.Parent("tabSignoff",0)
+Gui.frmSignoff.GsGCOpen.Event(RowCellClick,GsGCOpen_RowCellClick)
+Gui.frmSignoff.GsGCClosed.Create(GsGridControl)
+Gui.frmSignoff.GsGCClosed.Size(13005,7245)
+Gui.frmSignoff.GsGCClosed.Position(0,0)
+Gui.frmSignoff.GsGCClosed.Parent("tabSignoff",1)
+Gui.frmSignoff.GsGCClosed.Event(RowCellClick,GsGCClosed_RowCellClick)
+Gui.frmConfirm..Create
+Gui.frmConfirm..Caption("Confirm")
+Gui.frmConfirm..Size(2160,2085)
+Gui.frmConfirm..MinX(0)
+Gui.frmConfirm..MinY(0)
+Gui.frmConfirm..Position(0,0)
+Gui.frmConfirm..BackColor(-2147483633)
+Gui.frmConfirm..MaxButton(False)
+Gui.frmConfirm..MinButton(False)
+Gui.frmConfirm..MousePointer(0)
+Gui.frmConfirm..Sizeable(False)
+Gui.frmConfirm..Event(UnLoad,frmConfirm_UnLoad)
+Gui.frmConfirm.ddlUser.Create(DropDownList)
+Gui.frmConfirm.ddlUser.Size(1905,330)
+Gui.frmConfirm.ddlUser.Position(60,330)
+Gui.frmConfirm.lblUser.Create(Label,"User",True,1905,255,0,60,120,True,0,"Arial",8,-2147483633,0)
+Gui.frmConfirm.lblPassword.Create(Label,"Password",True,1905,255,0,60,765,True,0,"Arial",8,-2147483633,0)
+Gui.frmConfirm.txtPassword.Create(TextBox,"",True,1905,300,0,60,960,True,0,"Arial",8,-2147483643,1)
+Gui.frmConfirm.txtPassword.PasswordChar("*")
+Gui.frmConfirm.cmdOK.Create(Button)
+Gui.frmConfirm.cmdOK.Size(855,375)
+Gui.frmConfirm.cmdOK.Position(600,1305)
+Gui.frmConfirm.cmdOK.Caption("OK")
+Gui.frmConfirm.cmdOK.Event(Click,cmdOK_Click)
+Gui.frmNotes..Create
+Gui.frmNotes..Caption("Notes: ")
+Gui.frmNotes..Size(14460,7425)
+Gui.frmNotes..MinX(0)
+Gui.frmNotes..MinY(0)
+Gui.frmNotes..Position(0,0)
+Gui.frmNotes..BackColor(-2147483633)
+Gui.frmNotes..MousePointer(0)
+Gui.frmNotes..Event(UnLoad,frmNotes_UnLoad)
+Gui.frmNotes.GsGCNotes.Create(GsGridControl)
+Gui.frmNotes.GsGCNotes.Size(14310,7125)
+Gui.frmNotes.GsGCNotes.Position(0,0)
+Gui.frmNotes.GsGCNotes.Event(RowCellClick,GsGCNotes_RowCellClick)
+Gui.frmNotes.GsGCNotes.Event(CellValueChanged,GsGCNotes_CellValueChanged)
+Gui.frmEmail..Create
+Gui.frmEmail..Caption("Email")
+Gui.frmEmail..Size(6090,5670)
+Gui.frmEmail..MinX(0)
+Gui.frmEmail..MinY(0)
+Gui.frmEmail..Position(0,0)
+Gui.frmEmail..BackColor(-2147483633)
+Gui.frmEmail..MousePointer(0)
+Gui.frmEmail..Event(UnLoad,frmEmail_UnLoad)
+Gui.frmEmail..MaxButton(False)
+Gui.frmEmail..MinButton(False)
+Gui.frmEmail..Sizeable(False)
+Gui.frmEmail.lblRcpts.Create(Label,"Recipients (Separate multiple contacts by using commas)",True,5550,255,0,105,150,True,0,"Arial",8,-2147483633,0)
+Gui.frmEmail.txtRcpts.Create(TextboxM)
+Gui.frmEmail.txtRcpts.Size(5835,855)
+Gui.frmEmail.txtRcpts.Position(105,360)
+Gui.frmEmail.lblSubject.Create(Label,"Subject",True,1935,255,0,105,1305,True,0,"Arial",8,-2147483633,0)
+Gui.frmEmail.txtSubject.Create(TextBox,"",True,5835,300,0,105,1515,True,0,"Arial",8,-2147483643,1)
+Gui.frmEmail.lblBody.Create(Label,"Body",True,1935,255,0,105,1905,True,0,"Arial",8,-2147483633,0)
+Gui.frmEmail.txtBody.Create(TextboxM)
+Gui.frmEmail.txtBody.Size(5835,2715)
+Gui.frmEmail.txtBody.Position(105,2115)
+Gui.frmEmail.cmdSend.Create(Button)
+Gui.frmEmail.cmdSend.Size(855,375)
+Gui.frmEmail.cmdSend.Position(105,4905)
+Gui.frmEmail.cmdSend.Caption("Send")
+Gui.frmEmail.cmdSend.Event(Click,cmdSend_Click)
+Gui.frmEmail.lblInfo.Create(Label,"*Emails will be sent through Courier",True,2625,255,0,3315,5085,True,0,"Arial",7,-2147483633,0)
+Gui.frmText..Create
+Gui.frmText..Caption("Text Message")
+Gui.frmText..Size(6090,5670)
+Gui.frmText..MinX(0)
+Gui.frmText..MinY(0)
+Gui.frmText..Position(0,0)
+Gui.frmText..BackColor(-2147483633)
+Gui.frmText..MousePointer(0)
+Gui.frmText..Event(UnLoad,frmText_UnLoad)
+Gui.frmText..MaxButton(False)
+Gui.frmText..MinButton(False)
+Gui.frmText..Sizeable(False)
+Gui.frmText.lblRcpts.Create(Label,"Recipients ###-###-#### (Separate multiple contacts by using commas)",True,5550,255,0,105,150,True,0,"Arial",8,-2147483633,0)
+Gui.frmText.txtRcpts.Create(TextboxM)
+Gui.frmText.txtRcpts.Size(5835,855)
+Gui.frmText.txtRcpts.Position(105,360)
+Gui.frmText.lblSubject.Create(Label,"Subject",True,1935,255,0,105,1305,True,0,"Arial",8,-2147483633,0)
+Gui.frmText.txtSubject.Create(TextBox,"",True,5835,300,0,105,1515,True,0,"Arial",8,-2147483643,1)
+Gui.frmText.lblBody.Create(Label,"Body",True,1935,255,0,105,1905,True,0,"Arial",8,-2147483633,0)
+Gui.frmText.txtBody.Create(TextboxM)
+Gui.frmText.txtBody.Size(5835,2715)
+Gui.frmText.txtBody.Position(105,2115)
+Gui.frmText.cmdSend.Create(Button)
+Gui.frmText.cmdSend.Size(855,375)
+Gui.frmText.cmdSend.Position(105,4905)
+Gui.frmText.cmdSend.Caption("Send")
+Gui.frmText.cmdSend.Event(Click,cmdSendText_Click)
+Gui.frmText.lblInfo.Create(Label,"*Text Messages will be sent through Courier",True,3255,255,0,2685,5085,True,0,"Arial",7,-2147483633,0)
+Gui.frmText.ddlCarriers.Create(DropDownList)
+Gui.frmText.ddlCarriers.Size(1590,330)
+Gui.frmText.ddlCarriers.Position(1005,4920)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+	V.Global.iRow.Declare
+	V.Global.iRow.Set(-1)
+	V.Global.iRowIndex.Declare
+	V.Global.iSID.Declare
+	V.Global.sJob.Declare
+	V.Global.sSuffix.Declare
+	V.Global.sTask.Declare
+	V.Global.sUserEmail.Declare
+	V.Global.sUser.Declare
+	V.Global.sPrevSeq.Declare
+	V.Global.sNextSeq.Declare
+	V.Global.bReady.Declare
+	V.Global.sSeq.Declare
+	V.Global.sLMO.Declare
+	V.Global.sWC.Declare
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sIcon.Declare
+	V.Local.sRouter.Declare
+	V.Local.sRev.Declare
+	V.Local.sCaption.Declare
+	
+	F.Intrinsic.String.Build("{0}\GAB\GAS\gss2.ico",V.Caller.PluginsDir,v.Local.sIcon)
+	Gui.frmTask..Icon(V.Local.sIcon)
+	Gui.frmSignoff..Icon(V.Local.sIcon)
+	Gui.frmConfirm..Icon(V.Local.sIcon)
+	Gui.frmNotes..Icon(V.Local.sIcon)
+	Gui.frmEmail..Icon(V.Local.sIcon)
+	Gui.frmText..Icon(V.Local.sIcon)
+	
+	F.Intrinsic.Control.CallSub(CheckTables)
+	
+	F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+		F.Intrinsic.Control.Case(11210)
+			V.Passed.000201.Set("Tasks")
+		F.Intrinsic.Control.Case(11410)
+			F.Intrinsic.Control.CallSub(LoadDropDowns)
+			F.Intrinsic.Control.CallSub(CheckRouter)
+			F.Intrinsic.Control.CallSub(SetAnchors)
+			F.Intrinsic.Control.CallSub(SetContextMenus)
+			F.Intrinsic.String.Left(V.Passed.008000,17,V.Local.sRouter)
+			F.Intrinsic.String.Right(V.Passed.008000,3,V.Local.sRev)
+			F.Intrinsic.String.Build("Add/Edit Task (Router: {0} Rev: {1})",V.Local.sRouter.Trim,V.Local.sRev.Trim,V.Local.sCaption)
+			Gui.frmTask..Caption(V.Local.sCaption)
+			Gui.frmTask..Show
+		F.Intrinsic.Control.Case(16650)
+			F.Intrinsic.Control.CallSub(PullRouterTask)
+		F.Intrinsic.Control.Case(50120)
+			F.Intrinsic.Control.CallSub(PullRouterTask2)
+		F.Intrinsic.Control.Case(16770)
+			V.Passed.000097.Set("Tasks")
+		F.Intrinsic.Control.Case(16810)
+			F.Intrinsic.Control.CallSub(LoadDropDowns)
+			F.Intrinsic.Control.CallSub(CheckSignoff)
+			F.Intrinsic.Control.CallSub(SetAnchors)
+			F.Intrinsic.Control.CallSub(SetContextMenus)
+			F.Intrinsic.Control.If(V.Passed.009001,=,"")
+				F.Intrinsic.String.Build("Add/Edit Task ({0})",V.Passed.009000.Trim,V.Local.sCaption)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("Add/Edit Task ({0}-{1})",V.Passed.009000.Trim,V.Passed.009001.Trim,V.Local.sCaption)
+			F.Intrinsic.Control.EndIf
+			Gui.frmTask..Caption(V.Local.sCaption)
+			Gui.frmTask..Show
+		F.Intrinsic.Control.Case(16081)
+			F.Intrinsic.Control.CallSub(DeleteSignoff)
+		F.Intrinsic.Control.Case(15710)
+			V.Passed.000016.Set(TaskSignoff)
+		F.Intrinsic.Control.Case(15951)
+			V.Global.sJob.Set(V.Passed.009990)
+			V.Global.sSuffix.Set(V.Passed.009991)
+			V.Global.sSeq.Set(V.Passed.009992)
+			V.Global.sLMO.Set(V.Passed.009989)
+			V.Global.sWC.Set(V.Passed.009996)
+			F.Intrinsic.Control.CallSub(SignoffCheck)
+		F.Intrinsic.Control.CaseAny(15934,15754)
+			V.Global.sJob.Set(V.Passed.009000)
+			V.Global.sSuffix.Set(V.Passed.009001)
+			V.Global.sSeq.Set(V.Passed.009002)
+			V.Global.sLMO.Set(V.Passed.009989)
+			V.Global.sWC.Set(V.Passed.009004)
+			F.Intrinsic.Control.CallSub(SignoffCheck)
+		F.Intrinsic.Control.CaseElse
+			F.Intrinsic.Control.CallSub(SetAnchors)
+			F.Intrinsic.Control.CallSub(SetContextMenus)
+			F.Intrinsic.Control.CallSub(SetCarriers)
+			F.Intrinsic.Control.CallSub(LoadSignoff)
+			Gui.frmSignoff.tabSignoff.SetTab(0)
+			Gui.frmSignoff..Show
+			F.Intrinsic.Control.CallSub(SetTabAnchors)
+	F.Intrinsic.Control.EndSelect
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.frmTask_UnLoad.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	F.Intrinsic.Control.End
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmTask_UnLoad.End
+
+Program.Sub.CheckTables.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.bExists.Declare
+	
+	F.ODBC.Connection!con.OpenCompanyConnection(300)
+	
+	F.ODBC.Connection!con.TableExists("GAB_4772_TASK",V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,False)
+		F.ODBC.Connection!con.Execute("CREATE TABLE GAB_4772_TASK(TID IDENTITY,ROUTER CHAR(20),TASK CHAR(6),PREV_SEQ CHAR(30),NEXT_SEQ CHAR(30),SIGNOFF BIT,APPROVER CHAR(8),PRIMARY KEY(TID));")
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.TableExists("GAB_4772_SIGNOFF",V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,False)
+		F.ODBC.Connection!con.Execute("CREATE TABLE GAB_4772_SIGNOFF(SID IDENTITY,JOB CHAR(6),SUFFIX CHAR(3),ROUTER CHAR(20),TASK CHAR(6),PREV_SEQ CHAR(30),NEXT_SEQ CHAR(30),SIGNOFF BIT,APPROVER CHAR(8),READY BIT,SIGN_DATE DATE,SIGN_TIME TIME,SIGN_USER CHAR(8),PRIMARY KEY (SID));")
+		F.ODBC.Connection!con.Execute("CREATE INDEX GAB_4772_SIGNOFFK00 USING 1 ON GAB_4772_SIGNOFF(JOB);")
+		F.ODBC.Connection!con.Execute("CREATE INDEX GAB_4772_SIGNOFFK01 USING 2 ON GAB_4772_SIGNOFF(SUFFIX);")
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.TableExists("GAB_4772_SIGN_NOTES",V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,False)
+		F.ODBC.Connection!con.Execute("CREATE TABLE GAB_4772_SIGN_NOTES(NID IDENTITY,SID INTEGER,GSUSER CHAR(8),CREATE_DT DATE,CREATE_TIME TIME,NOTES LONGVARCHAR,PRIMARY KEY(NID));")
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.Close
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.CheckTables.End
+
+Program.Sub.SetAnchors.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	Gui.frmTask.GsGCTask.Anchor(15)
+	
+	Gui.frmSignoff.tabSignoff.Anchor(15)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.SetAnchors.End
+
+Program.Sub.SetTabAnchors.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	Gui.frmSignoff.GsGCOpen.Anchor(15)
+	Gui.frmSignoff.GsGCClosed.Anchor(15)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.SetTabAnchors.End
+
+Program.Sub.LoadDropDowns.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSQL.Declare
+	V.Local.iPrevSeq.Declare
+	V.Local.sPrevSeq.Declare
+	V.Local.iNextSeq.Declare
+	V.Local.sNextSeq.Declare
+	
+	F.Intrinsic.Control.If(V.DataTable.dtTask.Exists)
+		F.Data.DataTable.Close("dtTask")
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.OpenCompanyConnection(300)
+	
+	'Task
+	Gui.frmTask.ddlTask.AddItem("1START",0)
+	Gui.frmTask.ddlTask.AddItem("FINAL",1)
+	Gui.frmTask.ddlTask.Text("1START")
+	
+	'Prev and Next Seq
+	F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+		F.Intrinsic.Control.Case(11410)
+			F.Intrinsic.String.Build("Select '' As Line Union Select RTrim(Line_Router+'-'+Lmo+'-'+Part_Wc_Outside) As Line From Router_Line Where Router_Type = 'L' And Lmo <> 'C' And Router = '{0}' Order By Line;",V.Passed.008000,V.Local.sSQL)
+		F.Intrinsic.Control.Case(16810)
+			F.Intrinsic.String.Build("Select '' As Line Union Select RTrim(Seq+'-'+Lmo+'-'+Part) As Line From Job_Operations Where Lmo <> 'C' And Seq < 995000 And Job = '{0}' And Suffix = '{1}';",V.Passed.009000,V.Passed.009001,V.Local.sSQL)
+	F.Intrinsic.Control.EndSelect
+	
+	F.Data.DataTable.CreateFromSQL("dtTask","con",V.Local.sSQL,True)
+	Gui.frmTask.ddlPrev.AddItems("DataTable","dtTask","Line","Line")
+	F.Data.DataView.Create("dtTask","dvTask")
+	Gui.frmTask.ddlNext.AddItems("DataView","dtTask","dvTask","Line","Line")
+	
+	F.ODBC.Connection!con.Close
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadDropDowns.End
+
+Program.Sub.CheckRouter.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSQL.Declare
+	
+	F.Intrinsic.Control.If(V.DataTable.dtTaskCheck.Exists)
+		F.Data.DataTable.Close("dtTaskCheck")
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.OpenCompanyConnection(300)
+	
+	F.Intrinsic.String.Build("Select TID,ROUTER,TASK,RTrim(PREV_SEQ) As PREV_SEQ,RTrim(NEXT_SEQ) As NEXT_SEQ,SIGNOFF,APPROVER From GAB_4772_TASK Where Router = '{0}' Order By Prev_Seq;",V.Passed.008000,V.Local.sSQL)
+	F.Data.DataTable.CreateFromSQL("dtTaskCheck","con",V.Local.sSQL,True)
+	
+	Gui.frmTask.GsGCTask.AddGridviewFromDatatable("gvTaskCheck","dtTaskCheck")
+	Gui.frmTask.GsGCTask.SuspendLayout()
+	Gui.frmTask.GsGCTask.SetGridViewProperty("gvTaskCheck","MultiSelect",True)
+	Gui.frmTask.GsGCTask.SetGridViewProperty("gvTaskCheck","Editable",False)
+	Gui.frmTask.GsGCTask.SetGridViewProperty("gvTaskCheck","Readonly",True)
+	Gui.frmTask.GsGCTask.SetGridViewProperty("gvTaskCheck","AllowSort",False)
+	Gui.frmTask.GsGCTask.SetGridViewProperty("gvTaskCheck","AllowFilter",False)
+	Gui.frmTask.GsGCTask.SetGridViewProperty("gvTaskCheck","Showgrouppanel",False)
+	Gui.frmTask.GsGCTask.SetGridViewProperty("gvTaskCheck","AllowColumnResizing",False)
+	Gui.frmTask.GsGCTask.SetGridViewProperty("gvTaskCheck","Enableappearanceoddrow",True)
+	
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","TID","Visible",False)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","ROUTER","Visible",False)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","APPROVER","Visible",False)
+	
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","TID","Caption","ID")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","ROUTER","Caption","Router")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","TASK","Caption","Task")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","PREV_SEQ","Caption","Prev Seq")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","NEXT_SEQ","Caption","Next Seq")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","SIGNOFF","Caption","Signoff")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","APPROVER","Caption","Approver")
+	
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","TID","MinWidth","30")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","ROUTER","MinWidth","100")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","TASK","MinWidth","50")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","PREV_SEQ","MinWidth","100")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","NEXT_SEQ","MinWidth","100")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","SIGNOFF","MinWidth","50")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","APPROVER","MinWidth","50")
+	
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","TID","HeaderFontBold ",True)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","ROUTER","HeaderFontBold ",True)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","TASK","HeaderFontBold ",True)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","PREV_SEQ","HeaderFontBold ",True)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","NEXT_SEQ","HeaderFontBold ",True)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","SIGNOFF","HeaderFontBold ",True)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","APPROVER","HeaderFontBold ",True)
+	
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","TID","HeaderHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","ROUTER","HeaderHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","TASK","HeaderHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","PREV_SEQ","HeaderHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","NEXT_SEQ","HeaderHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","SIGNOFF","HeaderHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","APPROVER","HeaderHAlignment","Center")
+	
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","TID","CellHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","ROUTER","CellHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","TASK","CellHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","PREV_SEQ","CellHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","NEXT_SEQ","CellHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","SIGNOFF","CellHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvTaskCheck","APPROVER","CellHAlignment","Center")
+	
+	Gui.frmTask.GsGCTask.ResumeLayout()
+	Gui.frmTask.GsGCTask.MainView("gvTaskCheck")
+	V.Global.iRow.Set(-1)
+	
+	F.ODBC.Connection!con.Close
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.CheckRouter.End
+
+Program.Sub.cmdAdd_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.bSignoff.Declare
+	V.Local.sApprover.Declare
+
+	F.Intrinsic.Control.If(V.Screen.frmTask!chkSignoff.Value,=,1)
+		V.Local.bSignoff.Set(True)
+	F.Intrinsic.Control.Else
+		V.Local.bSignoff.Set(False)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Screen.frmTask!ddlTask.Text,=,"1START")
+		V.Local.sApprover.Set("1st Arti")
+	F.Intrinsic.Control.Else
+		V.Local.sApprover.Set("FINAL QC")
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+		F.Intrinsic.Control.Case(11410)
+			F.Intrinsic.Control.If(V.Global.iRow,=,-1)
+				F.Data.DataTable.AddRow("dtTaskCheck","TID",0,"Router",V.Passed.008000,"Task",V.Screen.frmTask!ddlTask.Text,"Prev_Seq",V.Screen.frmTask!ddlPrev.Text,"Next_Seq",V.Screen.frmTask!ddlNext.Text,"Signoff",V.Local.bSignoff,"Approver",V.Local.sApprover)
+			F.Intrinsic.Control.Else
+				F.Data.DataTable.SetValue("dtTaskCheck",V.Global.iRow,"TID",V.DataTable.dtTaskCheck(V.Global.iRow).TID!FieldVal,"Router",V.Passed.008000,"Task",V.Screen.frmTask!ddlTask.Text,"Prev_Seq",V.Screen.frmTask!ddlPrev.Text,"Next_Seq",V.Screen.frmTask!ddlNext.Text,"Signoff",V.Local.bSignoff,"Approver",V.Local.sApprover)
+			F.Intrinsic.Control.EndIf
+			F.ODBC.Connection!con.OpenCompanyConnection(300)
+			F.Data.DataTable.SaveToDB("dtTaskCheck","con","GAB_4772_TASK","TID")
+			F.ODBC.Connection!con.Close
+			F.Intrinsic.Control.CallSub(CheckRouter)
+		F.Intrinsic.Control.Case(16810)
+			F.Intrinsic.Control.If(V.Global.iRow,=,-1)
+				F.Data.DataTable.AddRow("dtCheckSignoff","SID",0,"Job",V.Passed.009000,"Suffix",V.Passed.009001,"Router",V.DataTable.dtCheckSignoff(0).Router!FieldValTrim,"Task",V.Screen.frmTask!ddlTask.Text,"Prev_Seq",V.Screen.frmTask!ddlPrev.Text,"Next_Seq",V.Screen.frmTask!ddlNext.Text,"Signoff",V.Local.bSignoff,"Approver",V.Local.sApprover)
+			F.Intrinsic.Control.Else
+				F.Data.DataTable.SetValue("dtCheckSignoff",V.Global.iRow,"SID",V.DataTable.dtCheckSignoff(V.Global.iRow).SID!FieldVal,"Router",V.Passed.008000,"Task",V.Screen.frmTask!ddlTask.Text,"Prev_Seq",V.Screen.frmTask!ddlPrev.Text,"Next_Seq",V.Screen.frmTask!ddlNext.Text,"Signoff",V.Local.bSignoff,"Approver",V.Local.sApprover)
+			F.Intrinsic.Control.EndIf
+			F.ODBC.Connection!con.OpenCompanyConnection(300)
+			F.Data.DataTable.SaveToDB("dtCheckSignoff","con","GAB_4772_SIGNOFF","SID")
+			F.ODBC.Connection!con.Close
+			F.Intrinsic.Control.CallSub(CheckSignoff)
+	F.Intrinsic.Control.EndSelect
+	
+	Gui.frmTask.ddlPrev.Text("")
+	Gui.frmTask.ddlNext.Text("")
+	Gui.frmTask.chkSignoff.Value(0)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdAdd_Click.End
+
+Program.Sub.SetContextMenus.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	Gui.frmTask..ContextMenuCreate("ctxTask")
+	Gui.frmTask.GsGCTask.ContextMenuAttach("ctxTask")
+	Gui.frmTask..ContextMenuAddItem("ctxTask","DelTask",0,"Delete Task")
+	Gui.frmTask..ContextMenuSetItemEventHandler("ctxTask","DelTask","MenuClickDelete")
+	
+	Gui.frmNotes..ContextMenuCreate("ctxNotes")
+	Gui.frmNotes.GsGCNotes.ContextMenuAttach("ctxNotes")
+	Gui.frmNotes..ContextMenuAddItem("ctxNotes","AddNote",0,"Add Note")
+	Gui.frmNotes..ContextMenuSetItemEventHandler("ctxNotes","AddNote","MenuClickAdd")
+	Gui.frmNotes..ContextMenuAddItem("ctxNotes","DelNote",0,"Delete Note")
+	Gui.frmNotes..ContextMenuSetItemEventHandler("ctxNotes","DelNote","MenuClickDelete")
+	Gui.frmNotes..ContextMenuAddItem("ctxNotes","Refresh",0,"Refresh")
+	Gui.frmNotes..ContextMenuSetItemEventHandler("ctxNotes","Refresh","MenuClickRefresh")
+	Gui.frmNotes..ContextMenuAddItem("ctxNotes","Export",0,"Export")
+	Gui.frmNotes..ContextMenuSetItemEventHandler("ctxNotes","Export","MenuClickExport")
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.SetContextMenus.End
+
+Program.Sub.MenuClickDelete.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.iRow.Declare
+	V.Local.sSQL.Declare
+	
+	F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+		F.Intrinsic.Control.Case(11410)
+			F.Intrinsic.Control.If(V.DataTable.dtTaskCheck.RowCount,<>,0)
+				Gui.frmTask.GsGCTask.GetSelectedRows("gvTaskCheck",V.Local.iRow)
+				F.Intrinsic.String.Build("Delete From GAB_4772_TASK Where TID = {0};",V.DataTable.dtTaskCheck(V.Local.iRow).TID!FieldVal,V.Local.sSQL)
+				F.ODBC.Connection!con.OpenCompanyConnection(300)
+				F.ODBC.Connection!con.Execute(V.Local.sSQL)
+				F.ODBC.Connection!con.Close
+				F.Data.DataTable.DeleteRow("dtTaskCheck",V.Local.iRow)
+				F.Intrinsic.Control.CallSub(CheckRouter)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Case(16810)
+			F.Intrinsic.Control.If(V.DataTable.dtCheckSignoff.RowCount,<>,0)
+				Gui.frmTask.GsGCTask.GetSelectedRows("gvCheckSignoff",V.Local.iRow)
+				F.Intrinsic.String.Build("Delete From GAB_4772_SIGNOFF Where SID = {0};",V.DataTable.dtCheckSignoff(V.Local.iRow).SID!FieldVal,V.Local.sSQL)
+				F.ODBC.Connection!con.OpenCompanyConnection(300)
+				F.ODBC.Connection!con.Execute(V.Local.sSQL)
+				F.ODBC.Connection!con.Close
+				F.Data.DataTable.DeleteRow("dtCheckSignoff",V.Local.iRow)
+				F.Intrinsic.Control.CallSub(CheckSignoff)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.CaseElse
+			F.Intrinsic.Control.If(V.DataTable.dtNotes.RowCount,<>,0)
+				Gui.frmNotes.GsGCNotes.GetSelectedRows("gvNotes",V.Local.iRow)
+				F.Intrinsic.String.Build("Delete From GAB_4772_SIGN_NOTES Where NID = {0};",V.DataTable.dtNotes(V.Local.iRow).NID!FieldVal,V.Local.sSQL)
+				F.ODBC.Connection!con.OpenCompanyConnection(300)
+				F.ODBC.Connection!con.Execute(V.Local.sSQL)
+				F.ODBC.Connection!con.Close
+				F.Data.DataTable.DeleteRow("dtNotes",V.Local.iRow)
+				F.Intrinsic.Control.CallSub(LoadDtNotes)
+			F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndSelect
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.MenuClickDelete.End
+
+Program.Sub.MenuClickAdd.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	F.Data.DataTable.AddRow("dtNotes","NID",0,"SID",V.Global.iSID,"GSUSER",V.Caller.User,"CREATE_DT",V.Ambient.Date,"CREATE_TIME",V.Ambient.Time.FormatHh:Nn:Ss)
+	F.Data.DataTable.RemoveColumn("dtNotes","Email")
+	F.Data.DataTable.RemoveColumn("dtNotes","Text")
+	F.ODBC.Connection!con.OpenCompanyConnection(300)
+	F.Data.DataTable.SaveToDB("dtNotes","con","GAB_4772_SIGN_NOTES","NID")
+	F.ODBC.Connection!con.Close
+	F.Intrinsic.Control.CallSub(LoadDtNotes)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.MenuClickAdd.End
+
+Program.Sub.MenuClickRefresh.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	F.Intrinsic.Control.CallSub(LoadDtNotes)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.MenuClickRefresh.End
+
+Program.Sub.MenuClickExport.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sFileExport.Declare
+	V.Local.bExcel.Declare
+	V.Local.bFileLocked.Declare
+	V.Local.sMsg.Declare
+	V.Local.iRet.Declare
+
+	F.Automation.MSExcel.CheckPresence(V.Local.bExcel)
+	F.Intrinsic.Control.If(V.Local.bExcel)
+		F.Intrinsic.String.Build("{0}\GAB_4772_Note_Export.xlsx",V.Caller.LocalGssTempDir,V.Local.sFileExport)
+		F.Intrinsic.File.IsFileLocked(V.Local.sFileExport,V.Local.bFileLocked)
+		F.Intrinsic.Control.If(V.Local.bFileLocked)
+			F.Intrinsic.String.Build("File is already open. Please close and export again.{0}File: {1}",V.Ambient.NewLine,V.Local.sFileExport,V.Local.sMsg)
+			F.Intrinsic.UI.Msgbox(V.Local.sMsg,"File In Use")
+		F.Intrinsic.Control.Else
+			Gui.frmNotes.GsGCNotes.Export(V.Local.sFileExport,"xlsx")
+			F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("{0}\GAB_4772_Note_Export.csv",V.Caller.LocalGssTempDir,V.Local.sFileExport)
+		F.Intrinsic.File.IsFileLocked(V.Local.sFileExport,V.Local.bFileLocked)
+		F.Intrinsic.Control.If(V.Local.bFileLocked)
+			F.Intrinsic.String.Build("File is already open. Please close and export again.{0}File: {1}",V.Ambient.NewLine,V.Local.sFileExport,V.Local.sMsg)
+			F.Intrinsic.UI.Msgbox(V.Local.sMsg,"File In Use")
+		F.Intrinsic.Control.Else
+			Gui.frmNotes.GsGCNotes.Export(V.Local.sFileExport,"csv")
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.MenuClickExport.End
+
+Program.Sub.GsGCTask_RowCellClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	F.Intrinsic.Control.If(V.Args.Clicks,=,2)
+		F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+			F.Intrinsic.Control.Case(11410)
+				Gui.frmTask.GsGCTask.GetSelectedRows("gvTaskCheck",V.Global.iRow)
+				Gui.frmTask.ddlTask.Text(V.DataTable.dtTaskCheck(V.Global.iRow).TASK!FieldValTrim)
+				Gui.frmTask.ddlPrev.Text(V.DataTable.dtTaskCheck(V.Global.iRow).PREV_SEQ!FieldValTrim)
+				Gui.frmTask.ddlNext.Text(V.DataTable.dtTaskCheck(V.Global.iRow).NEXT_SEQ!FieldValTrim)
+				F.Intrinsic.Control.If(V.DataTable.dtTaskCheck(V.Global.iRow).SIGNOFF!FieldVal)
+					Gui.frmTask.chkSignoff.Value(1)
+				F.Intrinsic.Control.Else
+					Gui.frmTask.chkSignoff.Value(0)
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.Case(16810)
+				Gui.frmTask.GsGCTask.GetSelectedRows("gvCheckSignoff",V.Global.iRow)
+				F.Intrinsic.Control.If(V.DataTable.dtCheckSignoff(V.Global.iRow).READY!FieldVal,=,False)
+					Gui.frmTask.ddlTask.Text(V.DataTable.dtCheckSignoff(V.Global.iRow).TASK!FieldValTrim)
+					Gui.frmTask.ddlPrev.Text(V.DataTable.dtCheckSignoff(V.Global.iRow).PREV_SEQ!FieldValTrim)
+					Gui.frmTask.ddlNext.Text(V.DataTable.dtCheckSignoff(V.Global.iRow).NEXT_SEQ!FieldValTrim)
+					F.Intrinsic.Control.If(V.DataTable.dtCheckSignoff(V.Global.iRow).SIGNOFF!FieldVal)
+						Gui.frmTask.chkSignoff.Value(1)
+					F.Intrinsic.Control.Else
+						Gui.frmTask.chkSignoff.Value(0)
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndSelect
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.GsGCTask_RowCellClick.End
+
+Program.Sub.PullRouterTask.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSQL.Declare
+	V.Local.sRouter.Declare
+	V.Local.iCnt.Declare
+	
+	F.Intrinsic.Control.If(V.DataTable.dtPullRouter.Exists)
+		F.Data.DataTable.Close("dtPullRouter")
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.DataTable.dtPullTask.Exists)
+		F.Data.DataTable.Close("dtPullTask")
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.OpenCompanyConnection(300)
+	
+	F.Intrinsic.String.GSSPartString(V.Passed.000006,V.Passed.000007,V.Local.sRouter)
+	F.Intrinsic.String.Build("Select * From GAB_4772_TASK Where Router = '{0}' Order By Prev_Seq;",V.Local.sRouter,V.Local.sSQL)
+	F.Data.DataTable.CreateFromSQL("dtPullRouter","con",V.Local.sSQL,True)
+	F.Intrinsic.Control.If(V.DataTable.dtPullRouter.RowCount,<>,0)
+		F.Intrinsic.String.Build("Select * From GAB_4772_SIGNOFF Where Job = '{0}' And Suffix = '{1}' Order By Prev_Seq;",V.Passed.000003,V.Passed.000004,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtPullTask","con",V.Local.sSQL,True)
+		F.Intrinsic.Control.If(V.DataTable.dtPullTask.RowCount,=,0)
+			F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataTable.dtPullRouter.RowCount--,1)
+				F.Data.DataTable.AddRow("dtPullTask","SID",0,"Job",V.Passed.000003,"Suffix",V.Passed.000004,"Router",V.Local.sRouter,"Task",V.DataTable.dtPullRouter(V.Local.iCnt).Task!FieldVal,"Prev_Seq",V.DataTable.dtPullRouter(V.Local.iCnt).Prev_Seq!FieldVal,"Next_Seq",V.DataTable.dtPullRouter(V.Local.iCnt).Next_Seq!FieldVal,"Signoff",V.DataTable.dtPullRouter(V.Local.iCnt).Signoff!FieldVal,"Approver",V.DataTable.dtPullRouter(V.Local.iCnt).Approver!FieldVal)
+			F.Intrinsic.Control.Next(V.Local.iCnt)
+			F.Data.DataTable.SaveToDB("dtPullTask","con","GAB_4772_SIGNOFF","SID")
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.Close
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.PullRouterTask.End
+
+Program.Sub.PullRouterTask2.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSQL.Declare
+	V.Local.sRouter.Declare
+	V.Local.iCnt.Declare
+	
+	F.Intrinsic.Control.If(V.DataTable.dtPullRouter.Exists)
+		F.Data.DataTable.Close("dtPullRouter")
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.DataTable.dtPullTask.Exists)
+		F.Data.DataTable.Close("dtPullTask")
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.OpenCompanyConnection(300)
+	
+	F.Intrinsic.String.Build("Select Router From V_Job_Header Where Job = '{0}' And Suffix = '{1}';",V.Passed.JOB,V.Passed.SUFFIX,V.Local.sSQL)
+	F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSQL,V.Local.sRouter)
+	F.Intrinsic.String.Build("Select * From GAB_4772_TASK Where Router = '{0}' Order By Prev_Seq;",V.Local.sRouter,V.Local.sSQL)
+	F.Data.DataTable.CreateFromSQL("dtPullRouter","con",V.Local.sSQL,True)
+	F.Intrinsic.Control.If(V.DataTable.dtPullRouter.RowCount,<>,0)
+		F.Intrinsic.String.Build("Select * From GAB_4772_SIGNOFF Where Job = '{0}' And Suffix = '{1}' Order By Prev_Seq;",V.Passed.JOB,V.Passed.SUFFIX,V.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtPullTask","con",V.Local.sSQL,True)
+		F.Intrinsic.Control.If(V.DataTable.dtPullTask.RowCount,=,0)
+			F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataTable.dtPullRouter.RowCount--,1)
+				F.Data.DataTable.AddRow("dtPullTask","SID",0,"Job",V.Passed.JOB,"Suffix",V.Passed.SUFFIX,"Router",V.Local.sRouter,"Task",V.DataTable.dtPullRouter(V.Local.iCnt).Task!FieldVal,"Prev_Seq",V.DataTable.dtPullRouter(V.Local.iCnt).Prev_Seq!FieldVal,"Next_Seq",V.DataTable.dtPullRouter(V.Local.iCnt).Next_Seq!FieldVal,"Signoff",V.DataTable.dtPullRouter(V.Local.iCnt).Signoff!FieldVal,"Approver",V.DataTable.dtPullRouter(V.Local.iCnt).Approver!FieldVal)
+			F.Intrinsic.Control.Next(V.Local.iCnt)
+			F.Data.DataTable.SaveToDB("dtPullTask","con","GAB_4772_SIGNOFF","SID")
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.Close
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.PullRouterTask2.End
+
+Program.Sub.CheckSignoff.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSQL.Declare
+	
+	F.Intrinsic.Control.If(V.DataTable.dtCheckSignoff.Exists)
+		F.Data.DataTable.Close("dtCheckSignoff")
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.OpenCompanyConnection(300)
+	
+	F.Intrinsic.String.Build("Select SID,JOB,SUFFIX,ROUTER,TASK,RTrim(PREV_SEQ) As PREV_SEQ,RTrim(NEXT_SEQ) As NEXT_SEQ,SIGNOFF,APPROVER,READY,SIGN_DATE,SIGN_TIME,SIGN_USER From GAB_4772_SIGNOFF Where Job = '{0}' And Suffix = '{1}' Order By Prev_Seq;",V.Passed.009000,V.Passed.009001,V.Local.sSQL)
+	F.Data.DataTable.CreateFromSQL("dtCheckSignoff","con",V.Local.sSQL,True)
+	
+	Gui.frmTask.GsGCTask.AddGridviewFromDatatable("gvCheckSignoff","dtCheckSignoff")
+	Gui.frmTask.GsGCTask.SuspendLayout()
+	Gui.frmTask.GsGCTask.SetGridViewProperty("gvCheckSignoff","MultiSelect",True)
+	Gui.frmTask.GsGCTask.SetGridViewProperty("gvCheckSignoff","Editable",False)
+	Gui.frmTask.GsGCTask.SetGridViewProperty("gvCheckSignoff","Readonly",True)
+	Gui.frmTask.GsGCTask.SetGridViewProperty("gvCheckSignoff","AllowSort",False)
+	Gui.frmTask.GsGCTask.SetGridViewProperty("gvCheckSignoff","AllowFilter",False)
+	Gui.frmTask.GsGCTask.SetGridViewProperty("gvCheckSignoff","Showgrouppanel",False)
+	Gui.frmTask.GsGCTask.SetGridViewProperty("gvCheckSignoff","AllowColumnResizing",False)
+	Gui.frmTask.GsGCTask.SetGridViewProperty("gvCheckSignoff","Enableappearanceoddrow",True)
+	
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SID","Visible",False)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","JOB","Visible",False)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SUFFIX","Visible",False)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","ROUTER","Visible",False)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","APPROVER","Visible",False)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","READY","Visible",False)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGN_DATE","Visible",False)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGN_TIME","Visible",False)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGN_USER","Visible",False)
+
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SID","Caption","ID")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","JOB","Caption","Job")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SUFFIX","Caption","Suffix")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","ROUTER","Caption","Router")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","TASK","Caption","Task")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","PREV_SEQ","Caption","Prev Seq")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","NEXT_SEQ","Caption","Next Seq")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGNOFF","Caption","Signoff")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","APPROVER","Caption","Approver")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","READY","Caption","Ready")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGN_DATE","Caption","Signoff Date")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGN_TIME","Caption","Signoff Time")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGN_USER","Caption","Signoff User")
+	
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SID","MinWidth","30")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","JOB","MinWidth","50")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SUFFIX","MinWidth","30")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","ROUTER","MinWidth","100")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","TASK","MinWidth","50")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","PREV_SEQ","MinWidth","100")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","NEXT_SEQ","MinWidth","100")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGNOFF","MinWidth","50")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","APPROVER","MinWidth","50")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","READY","MinWidth","50")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGN_DATE","MinWidth","50")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGN_TIME","MinWidth","50")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGN_USER","MinWidth","50")
+
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SID","HeaderFontBold ",True)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","JOB","HeaderFontBold ",True)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SUFFIX","HeaderFontBold ",True)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","ROUTER","HeaderFontBold ",True)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","TASK","HeaderFontBold ",True)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","PREV_SEQ","HeaderFontBold ",True)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","NEXT_SEQ","HeaderFontBold ",True)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGNOFF","HeaderFontBold ",True)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","APPROVER","HeaderFontBold ",True)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","READY","HeaderFontBold",True)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGN_DATE","HeaderFontBold",True)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGN_TIME","HeaderFontBold",True)
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGN_USER","HeaderFontBold",True)
+
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SID","HeaderHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","JOB","HeaderHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SUFFIX","HeaderHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","ROUTER","HeaderHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","TASK","HeaderHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","PREV_SEQ","HeaderHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","NEXT_SEQ","HeaderHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGNOFF","HeaderHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","APPROVER","HeaderHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","READY","HeaderHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGN_DATE","HeaderHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGN_TIME","HeaderHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGN_USER","HeaderHAlignment","Center")
+
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SID","CellHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","JOB","CellHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SUFFIX","CellHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","ROUTER","CellHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","TASK","CellHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","PREV_SEQ","CellHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","NEXT_SEQ","CellHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGNOFF","CellHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","APPROVER","CellHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","READY","CellHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGN_DATE","CellHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGN_TIME","CellHAlignment","Center")
+	Gui.frmTask.GsGCTask.SetColumnProperty("gvCheckSignoff","SIGN_USER","CellHAlignment","Center")
+	
+	Gui.frmTask.GsGCTask.ResumeLayout()
+	Gui.frmTask.GsGCTask.MainView("gvCheckSignoff")
+	V.Global.iRow.Set(-1)
+	
+	F.ODBC.Connection!con.Close
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.CheckSignoff.End
+
+Program.Sub.DeleteSignoff.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSQL.Declare
+	
+	F.ODBC.Connection!con.OpenCompanyConnection(300)
+	
+	F.Intrinsic.String.Build("Delete From GAB_4772_SIGNOFF Where Job = {0} And Suffix = '{1}';",V.Passed.000035,V.Passed.000017,V.Local.sSQL)
+	F.ODBC.Connection!con.Execute(V.Local.sSQL)
+	
+	F.ODBC.Connection!con.Close
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.DeleteSignoff.End
+
+Program.Sub.LoadSignoff.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSQL.Declare
+	
+	F.Intrinsic.Control.If(V.DataTable.dtSignoff.Exists)
+		F.Data.DataTable.Close("dtSignoff")
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.OpenCompanyConnection(300)
+	
+	F.Data.DataTable.CreateFromSQL("dtSignoff","con","Select SID,JOB,SUFFIX,ROUTER,TASK,RTrim(PREV_SEQ) As PREV_SEQ,RTrim(NEXT_SEQ) As NEXT_SEQ,SIGNOFF,APPROVER,READY,Cast(0 As Bit) As COMPLETE,SIGN_DATE,SIGN_TIME,SIGN_USER From GAB_4772_SIGNOFF Order By Job,Suffix,Prev_Seq;",True)
+	F.Data.DataTable.AddColumn("dtSignoff","NOTES",String,"Notes")
+	'Open Tasks
+	F.Data.DataView.Create("dtSignoff","dvSignoffOpen",22,"Sign_Date Is Null","Job,Suffix,Prev_Seq")
+	'Closed Tasks
+	F.Data.DataView.Create("dtSignoff","dvSignoffClosed",22,"Sign_Date Is Not Null","Job,Suffix,Prev_Seq")
+	
+	F.Intrinsic.Control.CallSub(LoadGvOpen)
+	F.Intrinsic.Control.CallSub(LoadGvClosed)
+	
+	F.ODBC.Connection!con.Close
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadSignoff.End
+
+Program.Sub.LoadGvOpen.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	Gui.frmSignoff.GsGCOpen.AddGridviewFromDataview("gvOpen","dtSignoff","dvSignoffOpen")
+	
+	Gui.frmSignoff.GsGCOpen.SuspendLayout()
+	Gui.frmSignoff.GsGCOpen.SetGridViewProperty("gvOpen","MultiSelect",True)
+	Gui.frmSignoff.GsGCOpen.SetGridViewProperty("gvOpen","Editable",False)
+	Gui.frmSignoff.GsGCOpen.SetGridViewProperty("gvOpen","ReadOnly",True)
+	Gui.frmSignoff.GsGCOpen.SetGridViewProperty("gvOpen","AllowSort",False)
+	Gui.frmSignoff.GsGCOpen.SetGridViewProperty("gvOpen","AllowFilter",False)
+	Gui.frmSignoff.GsGCOpen.SetGridViewProperty("gvOpen","Showgrouppanel",False)
+	Gui.frmSignoff.GsGCOpen.SetGridViewProperty("gvOpen","AllowColumnResizing",False)
+	Gui.frmSignoff.GsGCOpen.SetGridViewProperty("gvOpen","Enableappearanceoddrow",True)
+	
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SID","Visible",False)
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_DATE","Visible",False)
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_TIME","Visible",False)
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_USER","Visible",False)
+	
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","NOTES","ShowCaption",False)
+
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SID","Caption","ID")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","JOB","Caption","Job")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SUFFIX","Caption","Suffix")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","ROUTER","Caption","Router/Part")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","TASK","Caption","Task")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","PREV_SEQ","Caption","Prev Seq")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","NEXT_SEQ","Caption","Next Seq")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGNOFF","Caption","Signoff")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","APPROVER","Caption","Approver")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","READY","Caption","Ready")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","COMPLETE","Caption","Complete")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_DATE","Caption","Signoff Date")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_TIME","Caption","Signoff Time")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_USER","Caption","Signoff User")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","NOTES","Caption","Notes")
+	
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SID","MinWidth","30")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","JOB","MinWidth","50")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SUFFIX","MinWidth","30")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","ROUTER","MinWidth","100")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","TASK","MinWidth","50")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","PREV_SEQ","MinWidth","100")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","NEXT_SEQ","MinWidth","100")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGNOFF","MinWidth","50")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","APPROVER","MinWidth","50")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","READY","MinWidth","50")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","COMPLETE","MinWidth","50")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_DATE","MinWidth","50")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_TIME","MinWidth","50")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_USER","MinWidth","50")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","NOTES","MinWidth","50")
+	
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SID","HeaderFontBold ",True)
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","JOB","HeaderFontBold ",True)
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SUFFIX","HeaderFontBold ",True)
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","ROUTER","HeaderFontBold ",True)
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","TASK","HeaderFontBold ",True)
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","PREV_SEQ","HeaderFontBold ",True)
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","NEXT_SEQ","HeaderFontBold ",True)
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGNOFF","HeaderFontBold ",True)
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","APPROVER","HeaderFontBold ",True)
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","READY","HeaderFontBold",True)
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","COMPLETE","HeaderFontBold",True)
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_DATE","HeaderFontBold",True)
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_TIME","HeaderFontBold",True)
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_USER","HeaderFontBold",True)
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","NOTES","HeaderFontBold",True)
+
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SID","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","JOB","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SUFFIX","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","ROUTER","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","TASK","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","PREV_SEQ","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","NEXT_SEQ","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGNOFF","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","APPROVER","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","READY","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","COMPLETE","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_DATE","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_TIME","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_USER","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","NOTES","HeaderHAlignment","Center")
+
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SID","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","JOB","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SUFFIX","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","ROUTER","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","TASK","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","PREV_SEQ","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","NEXT_SEQ","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGNOFF","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","APPROVER","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","READY","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","COMPLETE","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_DATE","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_TIME","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_USER","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","NOTES","CellHAlignment","Center")
+	
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_DATE","DisplayCustomDatetime","d")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","SIGN_TIME","DisplayCustomDatetime","t")
+	
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","NOTES","CellBackColor","Gray")
+	Gui.frmSignoff.GsGCOpen.SetColumnProperty("gvOpen","NOTES","CellForeColor","White")
+	
+	Gui.frmSignoff.GsGCOpen.ResumeLayout()
+	Gui.frmSignoff.GsGCOpen.MainView("gvOpen")
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadGvOpen.End
+
+Program.Sub.LoadGvClosed.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	Gui.frmSignoff.GsGCClosed.AddGridviewFromDataview("gvClosed","dtSignoff","dvSignoffClosed")
+	
+	Gui.frmSignoff.GsGCClosed.SuspendLayout()
+	Gui.frmSignoff.GsGCClosed.SetGridViewProperty("gvClosed","MultiSelect",True)
+	Gui.frmSignoff.GsGCClosed.SetGridViewProperty("gvClosed","Editable",False)
+	Gui.frmSignoff.GsGCClosed.SetGridViewProperty("gvClosed","ReadOnly",True)
+	Gui.frmSignoff.GsGCClosed.SetGridViewProperty("gvClosed","AllowSort",False)
+	Gui.frmSignoff.GsGCClosed.SetGridViewProperty("gvClosed","AllowFilter",False)
+	Gui.frmSignoff.GsGCClosed.SetGridViewProperty("gvClosed","Showgrouppanel",False)
+	Gui.frmSignoff.GsGCClosed.SetGridViewProperty("gvClosed","AllowColumnResizing",False)
+	Gui.frmSignoff.GsGCClosed.SetGridViewProperty("gvClosed","Enableappearanceoddrow",True)
+	Gui.frmSignoff.GsGCClosed.SetGridViewProperty("gvClosed","ColumnPanelRowHeight",35)
+	
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SID","Visible",False)
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","COMPLETE","Visible",False)
+
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","NOTES","ShowCaption",False)
+
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SID","Caption","ID")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","JOB","Caption","Job")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SUFFIX","Caption","Suffix")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","ROUTER","Caption","Router/Part")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","TASK","Caption","Task")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","PREV_SEQ","Caption","Prev Seq")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","NEXT_SEQ","Caption","Next Seq")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGNOFF","Caption","Signoff")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","APPROVER","Caption","Approver")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","READY","Caption","Ready")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","COMPLETE","Caption","Complete")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_DATE","Caption","Signoff Date")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_TIME","Caption","Signoff Time")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_USER","Caption","Signoff User")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","NOTES","Caption","Notes")
+	
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SID","MinWidth","30")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","JOB","MinWidth","50")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SUFFIX","MinWidth","30")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","ROUTER","MinWidth","100")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","TASK","MinWidth","50")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","PREV_SEQ","MinWidth","100")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","NEXT_SEQ","MinWidth","100")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGNOFF","MinWidth","50")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","APPROVER","MinWidth","60")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","READY","MinWidth","50")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","COMPLETE","MinWidth","50")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_DATE","MinWidth","60")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_TIME","MinWidth","60")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_USER","MinWidth","60")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","NOTES","MinWidth","50")
+	
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_DATE","HeaderWordWrap","Wrap")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_TIME","HeaderWordWrap","Wrap")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_USER","HeaderWordWrap","Wrap")
+
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SID","HeaderFontBold ",True)
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","JOB","HeaderFontBold ",True)
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SUFFIX","HeaderFontBold ",True)
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","ROUTER","HeaderFontBold ",True)
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","TASK","HeaderFontBold ",True)
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","PREV_SEQ","HeaderFontBold ",True)
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","NEXT_SEQ","HeaderFontBold ",True)
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGNOFF","HeaderFontBold ",True)
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","APPROVER","HeaderFontBold ",True)
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","READY","HeaderFontBold",True)
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","COMPLETE","HeaderFontBold",True)
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_DATE","HeaderFontBold",True)
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_TIME","HeaderFontBold",True)
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_USER","HeaderFontBold",True)
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","NOTES","HeaderFontBold",True)
+
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SID","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","JOB","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SUFFIX","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","ROUTER","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","TASK","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","PREV_SEQ","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","NEXT_SEQ","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGNOFF","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","APPROVER","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","READY","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","COMPLETE","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_DATE","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_TIME","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_USER","HeaderHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","NOTES","HeaderHAlignment","Center")
+
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SID","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","JOB","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SUFFIX","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","ROUTER","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","TASK","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","PREV_SEQ","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","NEXT_SEQ","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGNOFF","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","APPROVER","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","READY","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","COMPLETE","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_DATE","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_TIME","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_USER","CellHAlignment","Center")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","NOTES","CellHAlignment","Center")
+	
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_DATE","DisplayCustomDatetime","d")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","SIGN_TIME","DisplayCustomDatetime","t")
+	
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","NOTES","CellBackColor","Gray")
+	Gui.frmSignoff.GsGCClosed.SetColumnProperty("gvClosed","NOTES","CellForeColor","White")
+	
+	Gui.frmSignoff.GsGCClosed.ResumeLayout()
+	Gui.frmSignoff.GsGCClosed.MainView("gvClosed")
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadGvClosed.End
+
+Program.Sub.GsGCOpen_RowCellClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.bReady.Declare
+	V.Local.sApprover.Declare
+	V.Local.sCaption.Declare
+	V.Local.sSQL.Declare
+	
+	F.Intrinsic.Control.SelectCase(V.Args.Column)
+		F.Intrinsic.Control.Case("READY")
+			Gui.frmSignoff.GsGCOpen.GetCellValueByColumnName("gvOpen","SID",V.Args.RowIndex,V.Global.iSID)
+			Gui.frmSignoff.GsGCOpen.SetCellValueByColumnName("gvOpen","READY",V.Args.RowIndex,True)
+			F.ODBC.Connection!con.OpenCompanyConnection(300)
+			F.Intrinsic.String.Build("Update GAB_4772_SIGNOFF Set READY = 1 Where SID = {0};",V.Global.iSID,V.Local.sSQL)
+			F.ODBC.Connection!con.Execute(V.Local.sSQL)
+			F.ODBC.Connection!con.Close
+		F.Intrinsic.Control.Case("COMPLETE")
+			V.Global.iRowIndex.Set(V.Args.RowIndex)
+			Gui.frmSignoff.GsGCOpen.GetCellValueByColumnName("gvOpen","SID",V.Args.RowIndex,V.Global.iSID)
+			Gui.frmSignoff.GsGCOpen.GetCellValueByColumnName("gvOpen","APPROVER",V.Args.RowIndex,V.Local.sApprover)
+			F.Intrinsic.Control.CallSub(LoadUsers,"Approver",V.Local.sApprover)
+			Gui.frmConfirm..Show
+			Gui.frmConfirm.txtPassword.SetFocus
+		F.Intrinsic.Control.Case("NOTES")
+			Gui.frmSignoff.GsGCOpen.GetCellValueByColumnName("gvOpen","SID",V.Args.RowIndex,V.Global.iSID)
+			Gui.frmSignoff.GsGCOpen.GetCellValueByColumnName("gvOpen","JOB",V.Args.RowIndex,V.Global.sJob)
+			Gui.frmSignoff.GsGCOpen.GetCellValueByColumnName("gvOpen","SUFFIX",V.Args.RowIndex,V.Global.sSuffix)
+			Gui.frmSignoff.GsGCOpen.GetCellValueByColumnName("gvOpen","TASK",V.Args.RowIndex,V.Global.sTask)
+			Gui.frmSignoff.GsGCOpen.GetCellValueByColumnName("gvOpen","PREV_SEQ",V.Args.RowIndex,V.Global.sPrevSeq)
+			Gui.frmSignoff.GsGCOpen.GetCellValueByColumnName("gvOpen","NEXT_SEQ",V.Args.RowIndex,V.Global.sNextSeq)
+			Gui.frmSignoff.GsGCOpen.GetCellValueByColumnName("gvOpen","READY",V.Args.RowIndex,V.Global.bReady)
+			F.Intrinsic.Control.If(V.Global.sSuffix.Trim,=,"")
+				F.Intrinsic.String.Build("Notes: {0}",V.Global.sJob.Trim,V.Local.sCaption)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("Notes: {0}-{1}",V.Global.sJob.Trim,V.Global.sSuffix.Trim,V.Local.sCaption)
+			F.Intrinsic.Control.EndIf
+			Gui.frmNotes..Caption(V.Local.sCaption)
+			F.Intrinsic.Control.CallSub(LoadDtNotes)
+	F.Intrinsic.Control.EndSelect
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.GsGCOpen_RowCellClick.End
+
+Program.Sub.GsGCClosed_RowCellClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.bReady.Declare
+	V.Local.sApprover.Declare
+	V.Local.sCaption.Declare
+	V.Local.sSQL.Declare
+	
+	F.Intrinsic.Control.SelectCase(V.Args.Column)
+		F.Intrinsic.Control.Case("NOTES")
+			Gui.frmSignoff.GsGCClosed.GetCellValueByColumnName("gvClosed","SID",V.Args.RowIndex,V.Global.iSID)
+			Gui.frmSignoff.GsGCClosed.GetCellValueByColumnName("gvClosed","JOB",V.Args.RowIndex,V.Global.sJob)
+			Gui.frmSignoff.GsGCClosed.GetCellValueByColumnName("gvClosed","SUFFIX",V.Args.RowIndex,V.Global.sSuffix)
+			Gui.frmSignoff.GsGCClosed.GetCellValueByColumnName("gvClosed","TASK",V.Args.RowIndex,V.Global.sTask)
+			Gui.frmSignoff.GsGCClosed.GetCellValueByColumnName("gvClosed","PREV_SEQ",V.Args.RowIndex,V.Global.sPrevSeq)
+			Gui.frmSignoff.GsGCClosed.GetCellValueByColumnName("gvClosed","NEXT_SEQ",V.Args.RowIndex,V.Global.sNextSeq)
+			Gui.frmSignoff.GsGCClosed.GetCellValueByColumnName("gvClosed","READY",V.Args.RowIndex,V.Global.bReady)
+			F.Intrinsic.Control.If(V.Global.sSuffix.Trim,=,"")
+				F.Intrinsic.String.Build("Notes: {0}",V.Global.sJob.Trim,V.Local.sCaption)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("Notes: {0}-{1}",V.Global.sJob.Trim,V.Global.sSuffix.Trim,V.Local.sCaption)
+			F.Intrinsic.Control.EndIf
+			Gui.frmNotes..Caption(V.Local.sCaption)
+			F.Intrinsic.Control.CallSub(LoadDtNotes)
+	F.Intrinsic.Control.EndSelect
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.GsGCClosed_RowCellClick.End
+
+Program.Sub.LoadUsers.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSQL.Declare
+	
+	F.Intrinsic.Control.If(V.DataTable.dtUsers.Exists)
+		F.Data.DataTable.Close("dtUsers")
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.OpenCompanyConnection(300)
+	
+	F.Intrinsic.String.Build("Select User_ID From Eng_Group Where Eng_Group = '{0}' Order by User_ID;",V.Args.Approver,V.Local.sSQL)
+	F.Data.DataTable.CreateFromSQL("dtUsers","con",V.Local.sSQL,True)
+	Gui.frmConfirm.ddlUser.AddItems("DataTable","dtUsers","User_ID","User_ID")
+	Gui.frmConfirm.ddlUser.Text(V.Caller.User)
+	Gui.frmConfirm.txtPassword.Text("")
+	
+	F.ODBC.Connection!con.Close
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadUsers.End
+
+Program.Sub.cmdOK_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.bUser.Declare
+	V.Local.sSQL.Declare
+	
+	F.Global.Security.ValidateUser(V.Caller.CompanyCode,V.Screen.frmConfirm!ddlUser.Text,V.Screen.frmConfirm!txtPassword.Text,V.Local.bUser)
+	F.Intrinsic.Control.If(V.Local.bUser)
+		Gui.frmSignoff.GsGCOpen.SetCellValueByColumnName("gvOpen","COMPLETE",V.Global.iRowIndex,True)
+		Gui.frmSignoff.GsGCOpen.SetCellValueByColumnName("gvOpen","SIGN_DATE",V.Global.iRowIndex,V.Ambient.Date)
+		Gui.frmSignoff.GsGCOpen.SetCellValueByColumnName("gvOpen","SIGN_TIME",V.Global.iRowIndex,V.Ambient.Time.FormatHh:Nn:Ss)
+		Gui.frmSignoff.GsGCOpen.SetCellValueByColumnName("gvOpen","SIGN_USER",V.Global.iRowIndex,V.Screen.frmConfirm!ddlUser.Text)
+		V.Global.sUser.Set(V.Screen.frmConfirm!ddlUser.Text)
+		F.ODBC.Connection!con.OpenCompanyConnection(300)
+		F.Intrinsic.String.Build("Update GAB_4772_SIGNOFF Set SIGN_DATE = '{0}', SIGN_TIME = '{1}', SIGN_USER = '{2}' Where SID = {3};",V.Ambient.Date.PervasiveDate,V.Ambient.Time.FormatHh:Nn:Ss,V.Screen.frmConfirm!ddlUser.Text,V.Global.iSID,V.Local.sSQL)
+		F.ODBC.Connection!con.Execute(V.Local.sSQL)
+		F.ODBC.Connection!con.Close
+		F.Intrinsic.Control.CallSub(frmConfirm_UnLoad)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox("Invalid Password")
+		Gui.frmConfirm.txtPassword.Text("")
+		Gui.frmConfirm.txtPassword.SetFocus
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdOK_Click.End
+
+Program.Sub.frmConfirm_UnLoad.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	Gui.frmConfirm..Visible(False)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmConfirm_UnLoad.End
+
+Program.Sub.LoadDtNotes.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSQL.Declare
+
+	F.Intrinsic.Control.If(V.DataTable.dtNotes.Exists)
+		F.Data.DataTable.Close("dtNotes")
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.OpenCompanyConnection(300)
+	
+	F.Intrinsic.String.Build("Select * From GAB_4772_SIGN_NOTES Where SID = {0} Order By Create_Dt Desc, Create_Time Desc;",V.Global.iSID,V.Local.sSQL)
+	F.Data.DataTable.CreateFromSQL("dtNotes","con",V.Local.sSQL,True)
+	F.Data.DataTable.AddColumn("dtNotes","Email",String,"Email")
+	F.Data.DataTable.AddColumn("dtNotes","Text",String,"Text Msg")
+	F.Intrinsic.Control.CallSub(LoadGvNotes)
+	
+	F.ODBC.Connection!con.Close
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadDtNotes.End
+
+Program.Sub.LoadGvNotes.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	Gui.frmNotes.GsGCNotes.AddGridViewFromDataTable("gvNotes","dtNotes")
+	Gui.frmNotes.GsGCNotes.MainView("gvNotes")
+	Gui.frmNotes.GsGCNotes.SuspendLayout()
+	Gui.frmNotes.GsGCNotes.SetGridViewProperty("gvNotes","MultiSelect",True)
+	Gui.frmNotes.GsGCNotes.SetGridViewProperty("gvNotes","OptionBehaviorEditable",True)
+	Gui.frmNotes.GsGCNotes.SetGridViewProperty("gvNotes","AllowSort",True)
+	Gui.frmNotes.GsGCNotes.SetGridViewProperty("gvNotes","AllowFilter",True)
+	Gui.frmNotes.GsGCNotes.SetGridViewProperty("gvNotes","OptionsDetailShowDetailTabs",False)
+	Gui.frmNotes.GsGCNotes.SetGridViewProperty("gvNotes","OptionsViewShowGroupPanel",True)
+	Gui.frmNotes.GsGCNotes.SetGridViewProperty("gvNotes","EnableAppearanceOddRow",True)
+	
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","NID","Visible",False)
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","SID","Visible",False)
+	
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","Email","ShowCaption",False)
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","Text","ShowCaption",False)
+
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","GSUSER","Caption","User")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","CREATE_DT","Caption","Create Date")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","CREATE_TIME","Caption","Create Time")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","NOTES","Caption","Notes")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","Email","Caption","Email")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","Text","Caption","Text Msg")
+	
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","GSUSER","AllowEdit",False)
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","CREATE_DT","AllowEdit",False)
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","CREATE_TIME","AllowEdit",False)
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","NOTES","AllowEdit",True)
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","Email","AllowEdit",False)
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","Text","AllowEdit",False)
+	
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","NOTES","ReadOnly",False)
+
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","GSUSER","MinWidth","50")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","CREATE_DT","MinWidth","50")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","CREATE_TIME","MinWidth","50")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","NOTES","MinWidth","350")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","Email","MinWidth","20")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","Text","MinWidth","20")
+	
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","GSUSER","HeaderFontBold",True)
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","CREATE_DT","HeaderFontBold",True)
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","CREATE_TIME","HeaderFontBold",True)
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","NOTES","HeaderFontBold",True)
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","Email","HeaderFontBold",True)
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","Text","HeaderFontBold",True)
+	
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","GSUSER","HeaderHAlignment","Center")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","CREATE_DT","HeaderHAlignment","Center")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","CREATE_TIME","HeaderHAlignment","Center")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","NOTES","HeaderHAlignment","Center")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","Email","HeaderHAlignment","Center")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","Text","HeaderHAlignment","Center")
+	
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","GSUSER","CellHAlignment","Center")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","CREATE_DT","CellHAlignment","Center")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","CREATE_TIME","CellHAlignment","Center")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","Email","CellHAlignment","Center")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","Text","CellHAlignment","Center")
+	
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","NOTES","CellBackColor","LightYellow")
+	
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","Email","CellBackColor","Gray")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","Text","CellBackColor","Gray")
+	
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","Email","CellForeColor","White")
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","Text","CellForeColor","White")
+	
+	Gui.frmNotes.GsGCNotes.SetColumnProperty("gvNotes","CREATE_DT","DisplayCustomDatetime","d")
+	Gui.frmNotes.GsGCNotes.ResumeLayout()
+
+	Gui.frmNotes..Visible(True)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.LoadGvNotes.End
+
+Program.Sub.frmNotes_UnLoad.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	Gui.frmNotes..Visible(False)
+	Gui.frmEmail..Visible(False)
+	Gui.frmText..Visible(False)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmNotes_UnLoad.End
+
+Program.Sub.GsGCNotes_RowCellClick.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sUser.Declare
+	V.Local.dCreateDt.Declare
+	V.Local.sCreateTime.Declare
+	V.Local.sNotes.Declare
+	V.Local.sSubject.Declare
+	V.Local.sBody.Declare
+	
+	Gui.frmNotes.GsGCNotes.GetCellValueByColumnName("gvNotes","GSUSER",V.Args.RowIndex,V.Local.sUser)
+	Gui.frmNotes.GsGCNotes.GetCellValueByColumnName("gvNotes","CREATE_DT",V.Args.RowIndex,V.Local.dCreateDt)
+	Gui.frmNotes.GsGCNotes.GetCellValueByColumnName("gvNotes","CREATE_TIME",V.Args.RowIndex,V.Local.sCreateTime)
+	Gui.frmNotes.GsGCNotes.GetCellValueByColumnName("gvNotes","NOTES",V.Args.RowIndex,V.Local.sNotes)
+	
+	F.Global.Security.GetUserEmail(V.Caller.User,V.Caller.CompanyCode,V.Global.sUserEmail)
+	F.Intrinsic.Control.If(V.Global.sUserEmail.Trim,=,"")
+		F.Global.Security.GetUserEmail(V.Global.sUser,V.Caller.CompanyCode,V.Global.sUserEmail)
+		F.Intrinsic.Control.If(V.Global.sUserEmail.Trim,=,"")
+			F.Global.Security.GetUserEmail(V.Local.sUser,V.Caller.CompanyCode,V.Global.sUserEmail)
+			F.Intrinsic.Control.If(V.Global.sUserEmail.Trim,=,"")
+				V.Global.sUserEmail.Set("")
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Global.sSuffix.Trim,=,"")
+		F.Intrinsic.String.Build("Notes for Work Order ({0})",V.Global.sJob,V.Global.sSuffix,V.Local.sSubject)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("Notes for Work Order ({0}-{1})",V.Global.sJob,V.Global.sSuffix,V.Local.sSubject)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Global.bReady)
+		F.Intrinsic.String.Build("Hello,{0}{1} entered in,{2}{3}{2}, on {4} at {5}.{0}{0}{6} is flagged as Ready.{0}{0}Prev Seq:{7}{0}Next Seq:{8}",V.Ambient.NewLine,V.Local.sUser,V.Ambient.DblQuote,V.Local.sNotes,V.Local.dCreateDt,V.Local.sCreateTime,V.Global.sTask,V.Global.sPrevSeq,V.Global.sNextSeq,V.Local.sBody)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("Hello,{0}{1} entered in,{2}{3}{2}, on {4} at {5}.{0}{0}",V.Ambient.NewLine,V.Local.sUser,V.Ambient.DblQuote,V.Local.sNotes,V.Local.dCreateDt,V.Local.sCreateTime,V.Local.sBody)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.SelectCase(V.Args.Column)
+		F.Intrinsic.Control.Case("Email")
+			Gui.frmEmail.txtRcpts.Text("")
+			Gui.frmEmail.txtSubject.Text(V.Local.sSubject)
+			Gui.frmEmail.txtBody.Text(V.Local.sBody)
+			Gui.frmText..Visible(False)
+			Gui.frmEmail..Show
+		F.Intrinsic.Control.Case("Text")
+			Gui.frmText.txtRcpts.Text("")
+			Gui.frmText.txtSubject.Text(V.Local.sSubject)
+			Gui.frmText.txtBody.Text(V.Local.sBody)
+			Gui.frmEmail..Visible(False)
+			Gui.frmText..Show
+	F.Intrinsic.Control.EndSelect
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.GsGCNotes_RowCellClick.End
+
+Program.Sub.GsGCNotes_CellValueChanged.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sText.Declare
+	V.Local.sSQL.Declare
+	
+	F.Intrinsic.Control.SelectCase(V.Args.Column)
+		F.Intrinsic.Control.Case("NOTES")
+			F.Intrinsic.String.Replace(V.Args.Value,"'","''",V.Local.sText)
+			F.Intrinsic.String.Build("Update GAB_4772_SIGN_NOTES Set Notes = '{0}' Where NID = {1};",V.Local.sText,V.DataTable.dtNotes(V.Args.RowIndex).NID!FieldVal,V.Local.sSQL)
+			F.ODBC.Connection!con.OpenCompanyConnection(300)
+			F.ODBC.Connection!con.Execute(V.Local.sSQL)
+			F.ODBC.Connection!con.Close
+	F.Intrinsic.Control.EndSelect
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.GsGCNotes_CellValueChanged.End
+
+Program.Sub.cmdSend_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.iRet.Declare
+	V.Local.iCnt.Declare
+	V.Local.sEmails.Declare
+	V.Local.iUserID.Declare
+	V.Local.sSender.Declare
+	V.Local.sRcpts.Declare
+	
+	F.Global.Security.GetUserId(V.Caller.User,V.Caller.CompanyCode,V.Local.iUserID)
+	F.Intrinsic.String.Build("{0}*!*{0}",V.Global.sUserEmail,V.Local.sSender)
+	
+	F.Intrinsic.Control.If(V.Global.sUserEmail,<>,"")
+		F.Intrinsic.UI.Msgbox("Do you want to continue and send an email to all the entered recipients?","Email",4,V.Local.iRet)
+		F.Intrinsic.Control.If(V.Local.iRet,=,6)
+
+			F.Intrinsic.Control.CallSub(CheckCourier)
+			F.Intrinsic.String.Split(V.Screen.frmEmail!txtRcpts.Text,",",V.Local.sEmails)
+			F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sEmails.UBound,1)
+				F.Intrinsic.Control.If(V.Local.iCnt,=,0)
+					F.Intrinsic.String.Build("{0}*!*{0}",V.Local.sEmails(V.Local.iCnt),V.Local.sRcpts)
+				F.Intrinsic.Control.Else
+					F.Intrinsic.String.Build("{0}@!@{1}*!*{1}",V.Local.sRcpts,V.Local.sEmails(V.Local.iCnt),V.Local.sRcpts)
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.Next(V.Local.iCnt)
+			F.Global.Messaging.QueueMessage(V.Caller.CompanyCode,V.Local.iUserID,"",V.Screen.frmEmail!txtSubject.Text,V.Local.sSender,V.Local.sRcpts,V.Screen.frmEmail!txtBody.Text)
+			Gui.frmEmail..Visible(False)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox("No Email set up for user.","No Email Setup")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdSend_Click.End
+
+Program.Sub.frmEmail_UnLoad.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	Gui.frmEmail..Visible(False)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmEmail_UnLoad.End
+
+Program.Sub.cmdSendText_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.iRet.Declare
+	V.Local.iCarrier.Declare
+	V.Local.sNumbers.Declare
+	V.Local.sNumbersSend.Declare
+	V.Local.iLen.Declare
+	V.Local.iCnt.Declare
+	
+	F.Intrinsic.Control.If(V.Global.sUserEmail,<>,"")
+		F.Intrinsic.UI.Msgbox("Do you want to continue and send a text message to all the entered recipients?","Text Message",4,V.Local.iRet)
+		F.Intrinsic.Control.If(V.Local.iRet,=,6)
+			F.Intrinsic.Control.CallSub(CheckCourier)
+			F.Intrinsic.Control.SelectCase(V.Screen.frmText!ddlCarriers.Text)
+				F.Intrinsic.Control.Case("ATT")
+					V.Local.iCarrier.Set(0)
+				F.Intrinsic.Control.Case("T-Mobile")
+					V.Local.iCarrier.Set(1)
+				F.Intrinsic.Control.Case("Sprint")
+					V.Local.iCarrier.Set(3)
+				F.Intrinsic.Control.Case("Verizon")
+					V.Local.iCarrier.Set(4)
+				F.Intrinsic.Control.CaseElse
+					V.Local.iCarrier.Set(-1)
+			F.Intrinsic.Control.EndSelect
+			F.Intrinsic.Control.If(V.Local.iCarrier,<>,-1)
+				F.Intrinsic.String.Split(V.Screen.frmText!txtRcpts.Text,",",V.Local.sNumbers)
+				F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sNumbers.UBound,1)
+					F.Intrinsic.String.Replace(V.Local.sNumbers(V.Local.iCnt),"-","",V.Local.sNumbersSend)
+					F.Intrinsic.String.Len(V.Local.sNumbersSend,V.Local.iLen)
+					F.Intrinsic.Control.If(V.Local.iLen,=,10)
+						F.Global.Messaging.CreateSMSmessage(V.Local.iCarrier,V.Local.sNumbersSend,V.Global.sUserEmail,V.Screen.frmText!txtSubject.Text,V.Screen.frmText!txtBody.Text)
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.Next(V.Local.iCnt)
+				Gui.frmText..Visible(False)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.UI.Msgbox("Select a carrier.","Carrier Missing")
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox("No Email set up for user.","No Email Setup")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.cmdSendText_Click.End
+
+Program.Sub.frmText_UnLoad.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	Gui.frmText..Visible(False)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.frmText_UnLoad.End
+
+Program.Sub.SetCarriers.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.iCnt.Declare
+	V.Local.sCarriers.Declare
+	
+	V.Local.sCarriers.Set("ATT*!*T-Mobile*!*Sprint*!*Verizon")
+	F.Intrinsic.String.Split(V.Local.sCarriers,"*!*",V.Local.sCarriers)
+	F.Intrinsic.Control.For(V.Local.iCnt,0,V.Local.sCarriers.UBound,1)
+		Gui.frmText.ddlCarriers.AddItem(V.Local.sCarriers(V.Local.iCnt),V.Local.iCnt)
+	F.Intrinsic.Control.Next(V.Local.iCnt)
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.SetCarriers.End
+
+Program.Sub.CheckCourier.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.bCourier.Declare
+	
+	F.Global.Messaging.IsCourierRunning(V.Local.bCourier)
+	F.Intrinsic.Control.If(V.Local.bCourier,=,False)
+		F.Intrinsic.UI.Msgbox("Messages will not be sent until Courier is on","Courier is Not Running")
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.CheckCourier.End
+
+Program.Sub.SignoffCheck.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSQL.Declare
+	V.Local.sMsg.Declare
+	
+	F.ODBC.Connection!con.OpenCompanyConnection(300)
+	
+	F.Intrinsic.String.Build("Select * From GAB_4772_SIGNOFF Where Job = '{0}' And Suffix = '{1}' And Next_Seq = '{2}-{3}-{4}';",V.Global.sJob,V.Global.sSuffix,V.Global.sSeq,V.Global.sLMO,V.Global.sWC,V.Local.sSQL)
+	F.Data.DataTable.CreateFromSQL("dtCheck","con",V.Local.sSQL,True)
+	F.Intrinsic.Control.If(V.DataTable.dtCheck.RowCount,<>,0)
+		F.Intrinsic.Control.If(V.DataTable.dtCheck(0).SIGNOFF!FieldVal)
+			F.Intrinsic.Control.If(V.DataTable.dtCheck(0).SIGN_DATE!FieldValIsNull)
+				F.Intrinsic.Control.If(V.DataTable.dtCheck(0).SUFFIX!FieldValTrim,=,"")
+					F.Intrinsic.String.Build("Task {1} needs to be signed off first.{0}{0}Work Order: {2}{0}Prev Seq: {3}{0}Next Seq: {4}",V.Ambient.NewLine,V.DataTable.dtCheck(0).TASK!FieldValTrim,V.DataTable.dtCheck(0).JOB!FieldValTrim,V.DataTable.dtCheck(0).PREV_SEQ!FieldValTrim,V.DataTable.dtCheck(0).NEXT_SEQ!FieldValTrim,V.Local.sMsg)
+				F.Intrinsic.Control.Else
+					F.Intrinsic.String.Build("Task {1} needs to be signed off first.{0}{0}Work Order: {2}-{3}{0}Prev Seq: {4}{0}Next Seq: {5}",V.Ambient.NewLine,V.DataTable.dtCheck(0).TASK!FieldValTrim,V.DataTable.dtCheck(0).JOB!FieldValTrim,V.DataTable.dtCheck(0).SUFFIX!FieldValTrim,V.DataTable.dtCheck(0).PREV_SEQ!FieldValTrim,V.DataTable.dtCheck(0).NEXT_SEQ!FieldValTrim,V.Local.sMsg)
+				F.Intrinsic.Control.EndIf
+				F.Intrinsic.UI.Msgbox(V.Local.sMsg,"Signoff Validation")
+				V.Passed.777777.Set(1)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.Close
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+Program.Sub.SignoffCheck.End
